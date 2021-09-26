@@ -1,7 +1,7 @@
 # External Package
 
 `npm install semantic-ui-react semantic-ui-css`
-`npm install react-router`
+`npm install react-router-dom`
 
 # Getting Started with Create React App
 
