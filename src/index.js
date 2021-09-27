@@ -3,27 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import history from './history';
-
-import Patient_HP from '../src/component/Patient/Patient_Home_Page';
-import Doctor_HP from '../src/component/Doctor/Doctor_Home_Page';
-import Survey from '../src/component/Survey';
-import Info from '../src/component/Patient/Basic_Info';
+import { Provider } from 'react-redux';
+import store from './store';
 
 ReactDOM.render(
-  // <React.StrictMode>
-  //   <App />
-  // </React.StrictMode>,
-  (<Router history={history}>
-    <Switch>
-      <Route path="/" exact component={App} />
-      <Route path="/patient" component={Patient_HP} />
-      <Route path="/doctor" component={Doctor_HP} />
-      <Route path="/survey/" component={Survey} />
-      <Route path="/info" component={Info} />
-    </Switch>
-  </Router>),
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 );
 
