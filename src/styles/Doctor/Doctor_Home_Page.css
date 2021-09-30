@@ -1,0 +1,33 @@
+.doctor_sign_out{
+    margin-left : 50px;
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 6px;
+    border-radius: 4px;
+}
+
+.doctor_invite{
+    position: absolute;
+    right: 300px;
+    border : none;
+    background-color : transparent;
+    font-size: 25px;
+}
+
+.doctor_user{
+    position: absolute;
+    right: 50px;
+    border : none;
+    background-color : transparent;
+    font-size: 25px;
+}
+.doctor_panes{
+    margin-left : 50px;
+    margin-top: 30px;
+    margin-right : 50px;
+}

@@ -1,0 +1,16 @@
+.doctor_info{
+    margin-left : 20px;
+    border: none;
+    color: #008CBA;
+    padding: 20px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    background-color : transparent;
+    font-weight: bolder;
+}
+.patient_picture{
+    width: 220px;
+    height: 180px;
+}
