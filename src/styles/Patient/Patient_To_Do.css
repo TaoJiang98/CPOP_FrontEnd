@@ -1,0 +1,27 @@
+.to_do {
+    display: inline-block;
+    
+}
+
+.to_do_start {
+    border: none;
+    color: #008CBA;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    background-color: transparent;
+    font-weight: bolder;
+}
+
+.to_do_picture {
+    width: 1200px;
+    height: 180px;
+}
+
+.to_do_placeholder {
+    margin-left: 400px;
+}
+
+.to_do_table {
+    padding: 10px 50px;
+}

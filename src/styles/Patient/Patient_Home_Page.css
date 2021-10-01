@@ -1,0 +1,25 @@
+.patient_sign_out{
+    margin-left : 50px;
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 4px;
+}
+
+.patient_user{
+    position: absolute;
+    right: 50px;
+    border : none;
+    background-color : transparent;
+    font-size: 25px;
+}
+.patient_panes{
+    margin-left : 50px;
+    margin-top: 30px;
+    margin-right : 50px;
+}
