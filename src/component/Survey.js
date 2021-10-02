@@ -42,16 +42,14 @@ const bull = (
     </React.Fragment>
   );
 
-
 const Survey = () => {
     return (
-        <Box sx={{ minWidth:275}}>
-            {/* <Card variant="outlined">{card}</Card>    */}
-            {card}
-  
-        </Box>
 
-        
+      <Box sx={{ minWidth:275}}>
+          {/* <Card variant="outlined">{card}</Card>    */}
+          {card}
+
+      </Box>
     )
 }
 
