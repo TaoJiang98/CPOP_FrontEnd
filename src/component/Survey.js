@@ -1,6 +1,4 @@
 import React from 'react';
-import '../styles/Survey.css';
-
 import { Box, Button, Card, CardActions, CardContent, Chip, Stack, Typography, Pagination } from '@mui/material';
 
 const bull = (
@@ -36,9 +34,11 @@ const bull = (
         
       </CardContent>
 
-      <div align="center">
+      <Stack spacing={2} spacing={1} alignItems="center">
         <Button size="small" variant="contained">Next</Button>
-      </div>  
+        <Pagination count={10} variant="outlined" />
+      </Stack> 
+ 
     </React.Fragment>
   );
 
@@ -46,13 +46,9 @@ const bull = (
 const Survey = () => {
     return (
         <Box sx={{ minWidth:275}}>
-          <Card variant="outlined">{card}</Card>   
-
-          <div> 
-            <Stack spacing={2} alignItems="center">
-              <Pagination count={10} variant="outlined" />
-            </Stack> 
-          </div>
+            {/* <Card variant="outlined">{card}</Card>    */}
+            {card}
+  
         </Box>
 
         
