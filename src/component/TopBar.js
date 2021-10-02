@@ -168,12 +168,12 @@ const TopBar = () => {
             <MenuIcon />
           </IconButton>
           <Typography
-            variant="h6"
+            variant="h5"
             noWrap
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
-            MUI
+            CPOP
           </Typography>
           <Search>
             <SearchIconWrapper>

@@ -69,7 +69,7 @@ ScrollTop.propTypes = {
   window: PropTypes.func,
 };
 
-export default function BackToTop(props) {
+const App = (props) => {
   return (
     <React.Fragment>
       <CssBaseline />
@@ -98,20 +98,4 @@ export default function BackToTop(props) {
   );
 }
 
-
-
-// const App = () => {
-//   return (
-    <Router>
-      <TopBar />
-      <Route path="/" exact component={Home} />
-      <Route path="/patient" component={Patient_HP} />
-      <Route path="/doctor" component={Doctor_HP} />
-      <Route path="/survey" component={Survey} />
-      <Route path="/info" component={Info} />
-      <Route path="/login" component={Login} />
-    </Router>
-//   )
-// }
-
-// export default App;
+export default App;
