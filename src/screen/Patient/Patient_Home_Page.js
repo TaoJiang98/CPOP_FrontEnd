@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Button, Card, CardActions, CardContent, CardMedia, Chip, Stack, Typography, Pagination } from '@mui/material';
+import Profile from './Basic_Info';
 
 const Survey_Card_1 = (
   <Card sx={{ maxWidth: 500 }}> 
