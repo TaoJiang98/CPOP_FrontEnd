@@ -26,10 +26,10 @@ const Basic_Info = () => {
                   { field: 'gender', minWidth: 150 },
                   { field: 'race', minWidth: 150 },
                   { field: 'education', minWidth: 150 },
-                  { field: 'smoking history', type: 'boolean', minWidth: 150 },
-                  { field: 'ETOH', type: 'boolean', minWidth: 150 },
-                  { field: 'medical comorbidities', minWidth: 150 },
-                  { field: 'steroid use history', minWidth: 150 }
+                  { field: 'smoking history', type: 'boolean', minWidth: 250 },
+                  { field: 'ETOH history', type: 'boolean', minWidth: 250 },
+                  { field: 'medical comorbidities', minWidth: 250 },
+                  { field: 'steroid use history', minWidth: 250 }
                 ]}
         rows={rows}
       />
