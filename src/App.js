@@ -76,9 +76,6 @@ const App = (props) => {
         {/* Top bar implemented here. */}
         <TopBar/>    
       <Toolbar id="back-to-top-anchor" />
-      {/* <Container> */}
-        {/* <Box sx={{ my: 2 }}> */}
-          {/* Router */}
           <Router>
             <Route path="/" exact component={Home} />
             <Route path="/patient" component={Patient_HP} />
@@ -87,8 +84,6 @@ const App = (props) => {
             <Route path="/info" component={Info} />
             <Route path="/login" component={Login} />
           </Router>
-        {/* </Box> */}
-      {/* </Container> */}
       <ScrollTop {...props}>
         <Fab color="secondary" size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />
