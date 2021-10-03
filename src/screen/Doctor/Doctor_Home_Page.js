@@ -23,7 +23,7 @@ export default function ControlledAccordions() {
           <Typography sx={{ width: '33%', flexShrink: 0 }}>
             Patient#1
           </Typography>
-          <Typography sx={{ color: 'text.secondary' }}>I am an accordion</Typography>
+          <Typography sx={{ color: 'text.secondary' }}>This is patient#1. </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -43,7 +43,7 @@ export default function ControlledAccordions() {
               Patient#2
           </Typography>
           <Typography sx={{ color: 'text.secondary' }}>
-            You are currently not an owner
+            This is patient#2.
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -65,7 +65,7 @@ export default function ControlledAccordions() {
           Patient#3
           </Typography>
           <Typography sx={{ color: 'text.secondary' }}>
-            Filtering has been entirely disabled for whole web server
+            This is patient#3.
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -85,9 +85,12 @@ export default function ControlledAccordions() {
           <Typography sx={{ width: '33%', flexShrink: 0 }}>
             Patient#4
           </Typography>
+          <Typography sx={{ color: 'text.secondary' }}>
+            This is patient#4.
+          </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+          <Typography> 
             Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit
             amet egestas eros, vitae egestas augue. Duis vel est augue.
           </Typography>
