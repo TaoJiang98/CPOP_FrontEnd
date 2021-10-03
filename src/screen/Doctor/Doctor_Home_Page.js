@@ -5,6 +5,8 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
+import Profile from './Profile';
+
 export default function ControlledAccordions() {
   const [expanded, setExpanded] = React.useState(false);
 
@@ -27,8 +29,7 @@ export default function ControlledAccordions() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
-            Aliquam eget maximus est, id dignissim quam.
+            <Profile/>
           </Typography>
         </AccordionDetails>
       </Accordion>
