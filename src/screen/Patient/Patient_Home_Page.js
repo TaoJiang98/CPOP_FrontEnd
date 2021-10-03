@@ -8,7 +8,7 @@ const Survey_Card_1 = (
         component="img"
         alt="survey-cover"
         height="140"
-        image="./survey-cover.jpg"
+        image="survey-cover.jpg"
     />
     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
@@ -30,7 +30,7 @@ const Survey_Card_2 = (
         component="img"
         alt="survey-cover"
         height="140"
-        image="./survey-cover.jpg"
+        image="survey-cover.jpg"
     />
     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
