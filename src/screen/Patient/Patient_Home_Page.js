@@ -11,7 +11,7 @@ const Survey_Card_1 = (
         component="img"
         alt="green iguana"
         height="140"
-        image="/static/images/cards/contemplative-reptile.jpg"
+        image="../images/survey-cover.jpeg"
     />
     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
@@ -52,7 +52,7 @@ const Survey_Card_2 = (
     </CardActions>
     </Card>
     );
-    
+
 const Patient_Home_Page = () => {
     return (
       <Stack direction="column" spacing={3} alignItems="center">
