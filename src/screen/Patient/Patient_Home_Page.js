@@ -11,7 +11,7 @@ const Survey_Card_1 = (
         component="img"
         alt="green iguana"
         height="140"
-        image="survey-cover.jpeg"
+        image="survey-cover.jpg"
     />
     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
