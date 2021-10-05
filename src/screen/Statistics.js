@@ -1,10 +1,10 @@
 import React from "react";
 import { dailySalesChart } from "variables/charts.js";
 
-import Card from "component/Card/Card.js";
-import CardHeader from "component/Card/CardHeader.js";
-import CardBody from "component/Card/CardBody.js";
-import CardFooter from "component/Card/CardFooter.js";
+import Card from "../component/Card/Card.js";
+import CardHeader from "../component/Card/CardHeader.js";
+import CardBody from "../component/Card/CardBody.js";
+import CardFooter from "../component/Card/CardFooter.js";
 
 
 const Chart_Info = () => {
