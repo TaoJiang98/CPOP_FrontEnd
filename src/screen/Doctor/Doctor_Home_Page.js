@@ -7,7 +7,8 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import Profile from '../Profile.js';
 
-export default function ControlledAccordions() {
+
+const Doctor_Home_Page = () => {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -79,3 +80,5 @@ export default function ControlledAccordions() {
     </div>
   );
 }
+
+export default Doctor_Home_Page;
