@@ -31,7 +31,6 @@ const Doctor_Home_Page = () => {
         </AccordionSummary>
         <AccordionDetails>
           <Profile/>
-          <Stats/>
         </AccordionDetails>
       </Accordion>
 
