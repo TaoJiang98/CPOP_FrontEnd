@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import Profile from '../Profile.js';
-import Stats from '../Statistics.js';
 
 
 const Doctor_Home_Page = () => {
@@ -31,7 +30,6 @@ const Doctor_Home_Page = () => {
         </AccordionSummary>
         <AccordionDetails>
           <Profile/>
-          <Stats/>
         </AccordionDetails>
       </Accordion>
 
