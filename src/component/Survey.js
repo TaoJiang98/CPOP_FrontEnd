@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import { Box, Button, Card, CardActions, CardContent, Chip, Stack, Typography, Pagination } from '@mui/material';
-
 const bull = (
   <Box
     component="span"
@@ -42,33 +41,40 @@ const card = (
   </React.Fragment>
 );
 
-const fetchQuestion = (body) => {
-  const url = "http://localhost:8089" + "/domain/api/v1/admin/view-paper";
-  console.log("body is: ", body);
-  fetch(url, {
-    method: 'POSE',
-    body: JSON.stringify(body),
-    headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, PUT, DELETE',
-    }
-  })
-  .then(res => res.json())
-  .then()
-}
-
 const Survey = () => {
-  const title = localStorage.getItem("title");
+  const [question, setQuestion] = useState({"data":{"questions": ["question"]}});
+  //const title = localStorage.getItem("title");
   const id = localStorage.getItem("id");
   const body = {"id" : id};
-  fetchQuestion(body);
+  const url = "/api/v1/admin/view-paper";
+    useEffect(() => {
+        fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(body),
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, PUT, DELETE',
+        }
+    })
+        .then(res => res.json())
+        .then(res => {
+            console.log(res)
+            setQuestion(res)
+        })}, [])
+
   return (
-    <Box sx={{ minWidth:275}}>
-        {/* <Card variant="outlined">{card}</Card>    */}
-        {card}
-    </Box>
+    // <Box sx={{ minWidth:275}}>
+    //     {/* <Card variant="outlined">{card}</Card>    */}
+    //     {card}
+    // </Box>
+    <div>
+        {question.data.questions.map(q => {
+            return <h3>{q.questionTitle}</h3>
+        })}
+    </div>
   )
 }
+
 
 export default Survey;

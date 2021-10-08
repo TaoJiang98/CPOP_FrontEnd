@@ -2,50 +2,7 @@ import React, { useEffect, useState } from 'react';
 //import { Box, Button, Card, CardActions, CardContent, CardMedia, Chip, Stack, Typography, Pagination } from '@mui/material';
 import { Stack } from '@mui/material';
 import SurveyCard from '../../component/SurveyCard';
-
-// const Survey_Card_1 = (
-//   <Card sx={{ maxWidth: 500 }}> 
-//     <CardMedia
-//         component="img"
-//         alt="survey-cover"
-//         height="140"
-//         image="survey-cover.jpg"
-//     />
-//     <CardContent>
-//         <Typography gutterBottom variant="h5" component="div">
-//         Introduction Survey
-//         </Typography>
-//         <Typography variant="body2" color="text.secondary">
-//         This survey should take you about 2 minutes.
-//         </Typography>
-//     </CardContent>
-//     <CardActions>
-//         <Button size="small">Start</Button>
-//     </CardActions>
-//     </Card>
-//   );
-
-// const Survey_Card_2 = (
-//   <Card sx={{ maxWidth: 500 }}>
-//     <CardMedia
-//         component="img"
-//         alt="survey-cover"
-//         height="140"
-//         image="survey-cover.jpg"
-//     />
-//     <CardContent>
-//         <Typography gutterBottom variant="h5" component="div">
-//         SNOT-22
-//         </Typography>
-//         <Typography variant="body2" color="text.secondary">
-//         This survey should take you about 5 minutes.
-//         </Typography>
-//     </CardContent>
-//     <CardActions>
-//         <Button size="small">Start</Button>
-//     </CardActions>
-//     </Card>
-//     );
+import axios from "axios";
 
 const Patient_Home_Page = () => {
   const [patients, setPatients] = useState({
@@ -58,21 +15,24 @@ const Patient_Home_Page = () => {
       {"id": "42345678910","title": "标题", "status": 0, "createTime": 1536887397173, "startTime": "", "endTime": ""}
     ]
   });
-  const url = "http://localhost:8089" + "/domain/api/v1/admin/paper-lists";
+
+  const url =  "/api/v1/admin/paper-lists";
+
   useEffect(() => {
     fetch(url, {
       method: 'GET',
       headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, PUT, DELETE',
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, PUT, DELETE',
       }
     })
-    .then(res => res.json())
-    .then((res) => {
-      console.log(res);
-    })
-  })
+        .then(res => res.json())
+        .then((res) => {
+          console.log(res);
+          setPatients(res)
+        })
+  },[])
 
   return (
     <Stack direction="column" spacing={3} alignItems="center">
