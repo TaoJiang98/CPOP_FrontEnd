@@ -1,56 +1,74 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Button, Card, CardActions, CardContent, Chip, Stack, Typography, Pagination } from '@mui/material';
 
 const bull = (
-    <Box
-      component="span"
-      sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-    >
-      •
-    </Box>
-  );
+  <Box
+    component="span"
+    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
+  >
+    •
+  </Box>
+);
   
-  const card = (
-    <React.Fragment>
-      <div align="center">
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" align="center" gutterBottom>
-          In the last two weeks, how has the follwoing impacted you? 
-        </Typography>
-        <Typography variant="h4" component="div" align="center">     
-          Nasal Blockage     
-        </Typography>
-      </div>
+const card = (
+  <React.Fragment>
+    <div align="center">
+      <Typography sx={{ fontSize: 14 }} color="text.secondary" align="center" gutterBottom>
+        In the last two weeks, how has the follwoing impacted you? 
+      </Typography>
+      <Typography variant="h4" component="div" align="center">     
+        Nasal Blockage     
+      </Typography>
+    </div>
 
-      <CardContent>
+    <CardContent>
 
-        <Stack direction="column" spacing={1} alignItems="center">
-          <Chip label="No Problem" color="default" clickable="true"/>
-          <Chip label="Very Mild Problem" color="default" clickable="true"/>
-          <Chip label="Mild or Slight Problem" color="default" clickable="true"/>
-          <Chip label="Moderate Problem" color="default" clickable="true"/>
-          <Chip label="Severe Problem" color="default" clickable="true"/>
-          <Chip label="Problem as bad as it can be" color="default" clickable="true"/>
-        </Stack>
-        
-      </CardContent>
+      <Stack direction="column" spacing={1} alignItems="center">
+        <Chip label="No Problem" color="default" clickable="true"/>
+        <Chip label="Very Mild Problem" color="default" clickable="true"/>
+        <Chip label="Mild or Slight Problem" color="default" clickable="true"/>
+        <Chip label="Moderate Problem" color="default" clickable="true"/>
+        <Chip label="Severe Problem" color="default" clickable="true"/>
+        <Chip label="Problem as bad as it can be" color="default" clickable="true"/>
+      </Stack>
+      
+    </CardContent>
 
-      <Stack spacing={2} spacing={1} alignItems="center">
-        <Button size="small" variant="contained">Next</Button>
-        <Pagination count={10} variant="outlined" />
-      </Stack> 
- 
-    </React.Fragment>
-  );
+    <Stack spacing={2} spacing={1} alignItems="center">
+      <Button size="small" variant="contained">Next</Button>
+      <Pagination count={10} variant="outlined" />
+    </Stack> 
+
+  </React.Fragment>
+);
+
+const fetchQuestion = (body) => {
+  const url = "http://localhost:8089" + "/domain/api/v1/admin/view-paper";
+  console.log("body is: ", body);
+  fetch(url, {
+    method: 'POSE',
+    body: JSON.stringify(body),
+    headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, PUT, DELETE',
+    }
+  })
+  .then(res => res.json())
+  .then()
+}
 
 const Survey = () => {
-    return (
-
-      <Box sx={{ minWidth:275}}>
-          {/* <Card variant="outlined">{card}</Card>    */}
-          {card}
-
-      </Box>
-    )
+  const title = localStorage.getItem("title");
+  const id = localStorage.getItem("id");
+  const body = {"id" : id};
+  fetchQuestion(body);
+  return (
+    <Box sx={{ minWidth:275}}>
+        {/* <Card variant="outlined">{card}</Card>    */}
+        {card}
+    </Box>
+  )
 }
 
 export default Survey;
