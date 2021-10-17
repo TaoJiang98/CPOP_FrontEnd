@@ -7,6 +7,7 @@ import Home from './screen/Home';
 import Patient_HP from './screen/Patient/Patient_Home_Page';
 import Doctor_HP from './screen/Doctor/Doctor_Home_Page';
 import Login from './screen/Login/Login';
+import Snot from './component/Snot';
 
 // component import
 import * as React from 'react';
@@ -81,6 +82,7 @@ const App = (props) => {
                 <Route path="/doctor" component={Doctor_HP}/>
                 <Route path="/survey" component={Survey}/>
                 <Route path="/login" component={Login}/>
+                <Route path="/snot" component={Snot}/>
                 <Route path="*" status={404}/>
             </Router>
             <ScrollTop {...props}>

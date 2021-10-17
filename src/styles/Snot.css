@@ -1,0 +1,26 @@
+.container {
+    max-width: 90%;
+    margin-left: 5%;
+}
+
+.table_header {
+    background-color:aquamarine;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.instructions {
+    width: 90%;
+    margin-left: 5%;
+    font-weight: bold;
+}
+
+.button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}

@@ -3,6 +3,8 @@ import { Box, Button, Card, CardActions, CardContent, CardMedia, Chip, Stack, Ty
 import { Link } from 'react-router-dom';
 import { useHistory } from "react-router-dom";
 
+import cover from '../images/survey-cover.jpg';
+
 const SurveyCard = ({title, id}) => {
     const history = useHistory();
 
@@ -18,14 +20,14 @@ const SurveyCard = ({title, id}) => {
                 component="img"
                 alt="survey-cover"
                 height="140"
-                image="survey-cover.jpg"
+                image={cover}
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
                 {title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                This survey should take you about 2 minutes.
+                This survey should take you about 15 minutes.
                 </Typography>
             </CardContent>
             <CardActions>
