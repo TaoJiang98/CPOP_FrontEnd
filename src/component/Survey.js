@@ -100,8 +100,10 @@ const Survey = () => {
                     <Form.Group controlId="year">
                       <Form.Label>Age</Form.Label>
                       <Form.Control
-                        type="text"
+                        type="number"
                         placeholder="Enter age"
+                        min={1}
+                        max={100}
                         value={age}
                         onChange={e => setAge(e.target.value)}
                         required
@@ -206,7 +208,7 @@ const Survey = () => {
                 <Row>
                   <Col>
                     <Form.Group controlId="medical comorbidities">
-                      <Form.Label>medical comorbidities</Form.Label>
+                      <Form.Label>Medical comorbidities</Form.Label>
                       <Form.Control
                         as="select"
                         className="form-select rounded"
