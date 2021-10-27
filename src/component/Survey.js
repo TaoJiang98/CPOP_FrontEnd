@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Card, CardActions, CardContent, Chip, Stack, Typography, Pagination } from '@mui/material';
+import { Box, Button, Card, CardActions, CardContent, Chip, Stack, Typography, Pagination, PaginationItem } from '@mui/material';
 
 const bull = (
     <Box
@@ -37,6 +37,7 @@ const bull = (
       <Stack spacing={2} spacing={1} alignItems="center">
         <Button size="small" variant="contained">Next</Button>
         <Pagination count={10} variant="outlined" />
+
       </Stack> 
  
     </React.Fragment>
