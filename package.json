@@ -34,11 +34,6 @@
     "web-vitals": "^1.1.2"
   },
 
-  "compilerOptions": {
-    "baseUrl": "src"
-  },
-  "include": ["src"],
-
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
