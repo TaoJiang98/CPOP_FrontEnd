@@ -3,7 +3,7 @@ import { Box, Button, Card, CardActions, CardContent, CardMedia, Chip, Stack, Ty
 import { Link } from 'react-router-dom';
 import { useHistory } from "react-router-dom";
 
-import cover from '../images/survey-cover.jpg';
+import cover from 'images/survey-cover.jpg';
 
 const SurveyCard = ({title, id}) => {
     const history = useHistory();
