@@ -1,6 +1,5 @@
 import React from 'react';
-import { Box, Button, Card, CardActions, CardContent, CardMedia, Chip, Stack, Typography, Pagination } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Button, Card, CardActions, CardContent, CardMedia, Chip, Stack, Typography, Pagination } from '@mui/material';
 import { useHistory } from "react-router-dom";
 
 import cover from 'images/survey-cover.jpg';
