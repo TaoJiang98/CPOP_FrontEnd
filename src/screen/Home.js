@@ -1,5 +1,5 @@
 import React from 'react';
-import Snot from '../component/Snot';
+import Snot from '../components/Snot';
 
 const home = () => {
     return (

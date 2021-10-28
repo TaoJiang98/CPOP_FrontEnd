@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 //import { Box, Button, Card, CardActions, CardContent, CardMedia, Chip, Stack, Typography, Pagination } from '@mui/material';
 import { Stack } from '@mui/material';
 // import SurveyCard from '../../component/SurveyCard';
-import SurveyCard from 'component/SurveyCard.js';
+import SurveyCard from 'components/SurveyCard.js';
 
 
 const Patient_Home_Page = () => {

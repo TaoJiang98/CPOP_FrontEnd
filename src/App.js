@@ -1,13 +1,13 @@
 // page import
 // import React from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import TopBar from './component/TopBar';
-import Survey from './component/Survey';
+import TopBar from './components/TopBar';
+import Survey from './components/Survey';
 import Home from './screen/Home';
 import Patient_HP from './screen/Patient/Patient_Home_Page';
 import Doctor_HP from './screen/Doctor/Doctor_Home_Page';
 import Login from './screen/Login/Login';
-import Snot from './component/Snot';
+import Snot from './components/Snot';
 
 // component import
 import * as React from 'react';
