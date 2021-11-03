@@ -1,7 +1,17 @@
+<<<<<<< Updated upstream
 import React from 'react';
 import { Box, Button, Card, CardActions, CardContent, CardMedia, Chip, Stack, Typography, Pagination } from '@mui/material';
 import { useHistory } from "react-router-dom"
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+=======
+import React, { useEffect, useState } from 'react';
+//import { Box, Button, Card, CardActions, CardContent, CardMedia, Chip, Stack, Typography, Pagination } from '@mui/material';
+import { Stack } from '@mui/material';
+// import SurveyCard from '../../component/SurveyCard';
+import SurveyCard from 'components/SurveyCard.js';
+
+import TopBar from 'components/TopBar.js';
+>>>>>>> Stashed changes
 
 const Patient_Home_Page = () => {
   const history = useHistory();
@@ -56,10 +66,27 @@ const Patient_Home_Page = () => {
       );
 
   return (
+<<<<<<< Updated upstream
     <Stack direction="column" spacing={3} alignItems="center">
       {Survey_Card_1}
       {Survey_Card_2}
     </Stack>
+=======
+    <div>
+      <TopBar/>
+      <Stack direction="column" spacing={3} alignItems="center">
+        {
+          patients.data.map((item, index) => {
+            return (<SurveyCard
+                title={item.title}
+                id = {item.id}
+                key = {index}
+            />)
+          })
+        }
+      </Stack>
+    </div>
+>>>>>>> Stashed changes
   );
 }
 

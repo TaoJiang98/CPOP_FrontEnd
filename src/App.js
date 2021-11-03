@@ -70,6 +70,7 @@ ScrollTop.propTypes = {
 };
 
 const App = (props) => {
+<<<<<<< Updated upstream
   return (
     <React.Fragment>
       <CssBaseline />
@@ -90,6 +91,30 @@ const App = (props) => {
       </ScrollTop>
     </React.Fragment>
   );
+=======
+    return (
+        <div>
+        {/* <React.Fragment> */}
+            {/* <CssBaseline/>
+            <Toolbar id="back-to-top-anchor"/> */}
+            <Router>
+                <Route path="/" exact component={Home}/>
+                <Route path="/patient" exact component={Patient_HP}/>
+                <Route path="/doctor" component={Doctor_HP}/>
+                <Route path="/survey" component={Survey}/>
+                <Route path="/login" component={Login}/>
+                <Route path="/snot" component={Snot}/>
+                <Route path="*" status={404}/>
+            </Router>
+            {/* <ScrollTop {...props}>
+                <Fab color="secondary" size="small" aria-label="scroll back to top">
+                    <KeyboardArrowUpIcon/>
+                </Fab>
+            </ScrollTop> */}
+        {/* </React.Fragment> */}
+        </div>
+    );
+>>>>>>> Stashed changes
 }
 
 export default App;

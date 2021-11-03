@@ -64,6 +64,7 @@ const Doctor_Home_Page = () => {
         </AccordionDetails>
       </Accordion>
 
+<<<<<<< Updated upstream
       <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -78,6 +79,106 @@ const Doctor_Home_Page = () => {
           <Profile/>
         </AccordionDetails>
       </Accordion>
+=======
+export default function Dashboard() {
+  const classes = useStyles();
+  return (
+    <div>
+      <TopBar/>
+      <GridContainer>
+        <GridItem xs={12} sm={6} md={3}>
+          <Card>
+            <CardHeader color="info" stats icon>
+              <CardIcon color="info">
+                <Accessibility />
+              </CardIcon>
+              <p className={classes.cardCategory}>Recent Sign Up</p>
+              <h3 className={classes.cardTitle}>+245</h3>
+            </CardHeader>
+            <CardFooter stats>
+              <div className={classes.stats}>
+                <Update />
+                Just Updated
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+      </GridContainer>
+      <GridContainer>
+        <GridItem xs={12} sm={12} md={4}>
+          <Card chart>
+            <CardHeader color="success">
+              <ChartistGraph
+                className="ct-chart"
+                data={dailySalesChart.data}
+                type="Line"
+                options={dailySalesChart.options}
+                listener={dailySalesChart.animation}
+              />
+            </CardHeader>
+            <CardBody>
+              <h4 className={classes.cardTitle}>SNOT-22</h4>
+              <p className={classes.cardCategory}>
+                <span className={classes.successText}>
+                  <ArrowUpward className={classes.upArrowCardCategory} /> 55%
+                </span>{" "}
+                increase in today.
+              </p>
+            </CardBody>
+            <CardFooter chart>
+              <div className={classes.stats}>
+                <AccessTime /> updated 4 minutes ago
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+        <GridItem xs={12} sm={12} md={4}>
+          <Card chart>
+            <CardHeader color="warning">
+              <ChartistGraph
+                className="ct-chart"
+                data={emailsSubscriptionChart.data}
+                type="Bar"
+                options={emailsSubscriptionChart.options}
+                responsiveOptions={emailsSubscriptionChart.responsiveOptions}
+                listener={emailsSubscriptionChart.animation}
+              />
+            </CardHeader>
+            <CardBody>
+              <h4 className={classes.cardTitle}>Individual Scores</h4>
+              <p className={classes.cardCategory}>Latest Health Status</p>
+            </CardBody>
+            <CardFooter chart>
+              <div className={classes.stats}>
+                <AccessTime /> updated 3 days ago
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+        <GridItem xs={12} sm={12} md={4}>
+          <Card chart>
+            <CardHeader color="danger">
+              <ChartistGraph
+                className="ct-chart"
+                data={completedTasksChart.data}
+                type="Line"
+                options={completedTasksChart.options}
+                listener={completedTasksChart.animation}
+              />
+            </CardHeader>
+            <CardBody>
+              <h4 className={classes.cardTitle}>Completed Surveys</h4>
+              <p className={classes.cardCategory}>Latest Health Status</p>
+            </CardBody>
+            <CardFooter chart>
+              <div className={classes.stats}>
+                <AccessTime /> updated 2 days ago
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+      </GridContainer>
+>>>>>>> Stashed changes
     </div>
   );
 }
